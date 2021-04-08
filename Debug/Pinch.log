@@ -1,39 +1,25 @@
-﻿BufferSet.obj : error LNK2001: 無法解析的外部符號 _pglActiveTexture
-Render.obj : error LNK2001: 無法解析的外部符號 _pglActiveTexture
-Source.obj : error LNK2001: 無法解析的外部符號 _pglActiveTexture
-BufferSet.obj : error LNK2001: 無法解析的外部符號 _pglUseProgram
-Render.obj : error LNK2001: 無法解析的外部符號 _pglUseProgram
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglUseProgram
-Source.obj : error LNK2001: 無法解析的外部符號 _pglUseProgram
-BufferSet.obj : error LNK2001: 無法解析的外部符號 _pglBindFramebufferEXT
-Render.obj : error LNK2001: 無法解析的外部符號 _pglBindFramebufferEXT
-Source.obj : error LNK2001: 無法解析的外部符號 _pglBindFramebufferEXT
-BufferSet.obj : error LNK2001: 無法解析的外部符號 _pglGenFramebuffersEXT
-Source.obj : error LNK2001: 無法解析的外部符號 _pglGenFramebuffersEXT
-BufferSet.obj : error LNK2001: 無法解析的外部符號 _pglFramebufferTexture2DEXT
-Render.obj : error LNK2001: 無法解析的外部符號 _pglFramebufferTexture2DEXT
-Render.obj : error LNK2001: 無法解析的外部符號 _pglCheckFramebufferStatusEXT
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglAttachShader
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglCompileShader
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglCreateProgram
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglCreateShader
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglDeleteProgram
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglDeleteShader
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglGetProgramiv
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglGetProgramInfoLog
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglGetShaderiv
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglGetShaderInfoLog
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglGetUniformLocation
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglLinkProgram
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglShaderSource
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglUniform1f
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglUniform1i
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglUniform1fv
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglUniform2fv
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglUniform3fv
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglUniform4fv
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglUniformMatrix2fv
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglUniformMatrix3fv
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglUniformMatrix4fv
-Shader.obj : error LNK2001: 無法解析的外部符號 _pglValidateProgram
-F:\Users\RTU\source\repos\Pinch\Pinch\Debug\Pinch.exe : fatal error LNK1120: 29 個無法解析的外部符號
+﻿  Source.cpp
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(212,19): warning C4244: '=': 將 'GLint' 轉換為 'float'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(213,19): warning C4244: '=': 將 'GLint' 轉換為 'float'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(313,18): warning C4101: 'height': 未參考的區域變數
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(313,11): warning C4101: 'width': 未參考的區域變數
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(314,12): warning C4101: 'format': 未參考的區域變數
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(313,26): warning C4101: 'component': 未參考的區域變數
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(312,13): warning C4101: 'tga': 未參考的區域變數
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(348,27): warning C4244: '=': 將 'float' 轉換為 'GLint'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(352,27): warning C4244: '=': 將 'float' 轉換為 'GLint'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(366,7): warning C4244: '=': 將 'GLdouble' 轉換為 'GLfloat'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(367,7): warning C4244: '=': 將 'GLdouble' 轉換為 'GLfloat'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(374,19): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(375,19): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(382,59): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(383,60): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(401,20): warning C4244: '=': 將 'double' 轉換為 'GLfloat'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(414,15): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(415,10): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(419,51): warning C4244: '*=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(420,51): warning C4244: '*=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(424,53): warning C4244: '+=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(425,22): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+F:\Users\RTU\source\repos\Pinch\Pinch\Pinch\Source.cpp(452,11): warning C4244: '正在初始化': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+  Pinch.vcxproj -> F:\Users\RTU\source\repos\Pinch\Pinch\Debug\Pinch.exe

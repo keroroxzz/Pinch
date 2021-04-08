@@ -7,9 +7,14 @@
 #include "baseHeader.h"
 #include "BufferSet.h"
 
+//#define DEBUG
+
 extern char basic_shader[];
 extern char copy_shader[];
 extern char reset_shader[];
+extern char display_shader[];
+extern char distort_shader[];
+extern char brush_shader[];
 
 Shader *resetShader, * brushShader, *copyShader, *distortShader, *displayShader;
 
@@ -229,25 +234,43 @@ void ReloadShaders()
 	delete displayShader;
 
 	resetShader = new Shader(2);
-	//resetShader->AddFromString(basic_shader, GL_VERTEX_SHADER);
+	brushShader = new Shader(2);
+	copyShader = new Shader(2);
+	distortShader = new Shader(2);
+	displayShader = new Shader(2);
+
+#ifdef DEBUG
+
+	printf("Load shaders from file...\n");
 	resetShader->AddFromFile("shaders/vertex/basic.vs", GL_VERTEX_SHADER);
 	resetShader->AddFromFile("shaders/frag/reset.fs", GL_FRAGMENT_SHADER);
-
-	brushShader = new Shader(2);
 	brushShader->AddFromFile("shaders/vertex/basic.vs", GL_VERTEX_SHADER);
 	brushShader->AddFromFile("shaders/frag/brush.fs", GL_FRAGMENT_SHADER);
-
-	copyShader = new Shader(2);
 	copyShader->AddFromFile("shaders/vertex/basic.vs", GL_VERTEX_SHADER);
 	copyShader->AddFromFile("shaders/frag/copy.fs", GL_FRAGMENT_SHADER);
-
-	distortShader = new Shader(2);
 	distortShader->AddFromFile("shaders/vertex/basic.vs", GL_VERTEX_SHADER);
 	distortShader->AddFromFile("shaders/frag/distort.fs", GL_FRAGMENT_SHADER);
-
-	displayShader = new Shader(2);
 	displayShader->AddFromFile("shaders/vertex/basic.vs", GL_VERTEX_SHADER);
 	displayShader->AddFromFile("shaders/frag/display.fs", GL_FRAGMENT_SHADER);
+
+
+#else
+
+	printf("Load shaders from memory...\n");
+	resetShader->AddFromString(basic_shader, GL_VERTEX_SHADER);
+	resetShader->AddFromString(reset_shader, GL_FRAGMENT_SHADER);
+	brushShader->AddFromString(basic_shader, GL_VERTEX_SHADER);
+	brushShader->AddFromString(brush_shader, GL_FRAGMENT_SHADER);
+	copyShader->AddFromString(basic_shader, GL_VERTEX_SHADER);
+	copyShader->AddFromString(copy_shader, GL_FRAGMENT_SHADER);
+	distortShader->AddFromString(basic_shader, GL_VERTEX_SHADER);
+	distortShader->AddFromString(distort_shader, GL_FRAGMENT_SHADER);
+	displayShader->AddFromString(basic_shader, GL_VERTEX_SHADER);
+	displayShader->AddFromString(display_shader, GL_FRAGMENT_SHADER);
+
+#endif
+
+	printf("Done!\n");
 }
 
 //initialization
