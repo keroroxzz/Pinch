@@ -276,27 +276,16 @@ void ReloadShaders()
 //initialization
 void SetupRC()
 {
-	printf("Startup the program...\n");
+	printf("Pinch - Alpha 1.0\nby Brian Tu\nRelease Date:2021/04/09\n\n");
 	brushProfile[0] = -1.0;
 
-    // Make sure required functionality is available!
-    if (!GLEE_VERSION_2_0 && (!GLEE_ARB_fragment_shader ||
-        !GLEE_ARB_shader_objects ||
-        !GLEE_ARB_shading_language_100))
-    {
-        fprintf(stderr, "GLSL extensions not available!\n");
-        return;
-    }
+    // Requirment check
+    if (!GLEE_VERSION_2_0 && (!GLEE_ARB_fragment_shader || !GLEE_ARB_shader_objects || !GLEE_ARB_shading_language_100))
+        printf("GLSL extensions not available!\n");
 
-    // Make sure we have multitexture and cube maps!
-    if (!GLEE_VERSION_1_3 && (!GLEE_ARB_multitexture ||
-        !GLEE_ARB_texture_cube_map))
-    {
-        fprintf(stderr, "Neither OpenGL 1.3 nor necessary"
-            " extensions are available!\n");
-        return;
-    }
-
+    if (!GLEE_VERSION_1_3)
+        printf("OpenGL 1.3 is not available!\n");
+ 
     // Black background
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
@@ -317,7 +306,6 @@ void SetupRC()
 
     glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_DECAL);
 
-    //Load Image
 	glActiveTexture(GL_TEXTURE0 + 0);
 	glGenTextures(1, &tmp_texture);
 
